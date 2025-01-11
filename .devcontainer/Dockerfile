@@ -10,4 +10,4 @@ RUN apt update -y \
     && playwright install firefox \
     && playwright install-deps firefox
 
-COPY src ./
+
