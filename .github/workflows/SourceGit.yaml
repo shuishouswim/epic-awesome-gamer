@@ -37,6 +37,10 @@ jobs:
         if [ -d "user_data_dir" ];then cp -rfp user_data_dir epic/; fi
         echo "{}" > epic/src/config.json
         cd epic/src/ && python3 claim.py
+        
+    - name: Setup Debug Session
+      uses: csexton/debugger-action@master
+      
     - name: Setup GIT user
       uses: fregante/setup-git-user@v1
     - name: 缓存身份令牌
